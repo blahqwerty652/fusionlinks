@@ -1,27 +1,231 @@
-<!-- Link List Container -->
-<div class="link-list" id="linkList">
-    
-    <div class="link-card" data-keywords="melonloader modloader bonelab">
-        <div class="link-info">
-            <h3>MelonLoader</h3>
-            <p>The universal mod loader required for Fusion.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion PC QS Link Hub</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 0.25rem;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .link-card {
+            background-color: var(--card-bg);
+            padding: 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .link-info h3 {
+            margin: 0 0 0.35rem 0;
+            font-size: 1.1rem;
+        }
+
+        .link-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            word-break: break-all;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: #0f172a;
+            padding: 0.55rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background-color: #334155;
+            color: var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #475569;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #64748b;
+            padding: 2rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Fusion PC QS Links</h1>
+        <div class="subtitle">Standalone Quick Access Repository</div>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" class="search-box" placeholder="Filter links by name or description..." onkeyup="filterLinks()">
+
+        <!-- Link List Container -->
+        <div class="link-list" id="linkList">
+            
+            <!-- LemonLoader / MelonLoader 0.6.5.1 -->
+            <div class="link-card" data-keywords="lemonloader melonloader 0.6.5.1 loader">
+                <div class="link-info">
+                    <h3>LemonLoader (v0.6.5.1)</h3>
+                    <p>https://github.com/LemonLoader/MelonLoader/releases/tag/0.6.5.1</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary" onclick="copyLink('https://github.com/LemonLoader/MelonLoader/releases/tag/0.6.5.1', this)">Copy</button>
+                    <a href="https://github.com/LemonLoader/MelonLoader/releases/tag/0.6.5.1" target="_blank" class="btn">Open</a>
+                </div>
+            </div>
+
+            <!-- Epic Fusion 0.2.1 -->
+            <div class="link-card" data-keywords="epic fusion checkerb0ard bonelab 0.2.1">
+                <div class="link-info">
+                    <h3>BONELAB Fusion - Epic Edition (v0.2.1)</h3>
+                    <p>https://github.com/Checkerb0ard/BONELAB-Fusion/releases/tag/0.2.1</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary" onclick="copyLink('https://github.com/Checkerb0ard/BONELAB-Fusion/releases/tag/0.2.1', this)">Copy</button>
+                    <a href="https://github.com/Checkerb0ard/BONELAB-Fusion/releases/tag/0.2.1" target="_blank" class="btn">Open</a>
+                </div>
+            </div>
+
         </div>
-        <a href="https://thunderstore.io/c/bonelab/p/LavaGang/MelonLoader/" target="_blank" class="btn">View Page</a>
+
+        <div id="emptyState" class="empty-state">No matching links found.</div>
     </div>
 
-    <div class="link-card" data-keywords="bonelib utility mod">
-        <div class="link-info">
-            <h3>BoneLib</h3>
-            <p>Core utility mod that makes life easier for creators.</p>
-        </div>
-        <a href="https://thunderstore.io/c/bonelab/p/bonelib/BoneLib/" target="_blank" class="btn">View Page</a>
-    </div>
-    <div class="link-card" data-keywords="fusion multiplayer bonelab">
-        <div class="link-info">
-            <h3>Fusion</h3>
-            <p>The Bonelab multiplayer mod.</p>
-        </div>
-        <a href="https://thunderstore.io/c/bonelab/p/Lakatrazz/Fusion/" target="_blank" class="btn">View Page</a>
-    </div>
+    <script>
+        function filterLinks() {
+            const input = document.getElementById('searchBar').value.toLowerCase();
+            const cards = document.getElementsByClassName('link-card');
+            const emptyState = document.getElementById('emptyState');
+            let visibleCount = 0;
 
-</div>
+            for (let i = 0; i < cards.length; i++) {
+                const keywords = cards[i].getAttribute('data-keywords');
+                const textContent = cards[i].innerText.toLowerCase();
+                
+                if (keywords.includes(input) || textContent.includes(input)) {
+                    cards[i].style.display = "flex";
+                    visibleCount++;
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+
+            if (visibleCount === 0) {
+                emptyState.style.display = "block";
+            } else {
+                emptyState.style.display = "none";
+            }
+        }
+
+        function copyLink(url, btnElement) {
+            navigator.clipboard.writeText(url).then(() => {
+                const originalText = btnElement.innerText;
+                btnElement.innerText = "Copied!";
+                btnElement.style.backgroundColor = "#22c55e";
+                btnElement.style.color = "#ffffff";
+                
+                setTimeout(() => {
+                    btnElement.innerText = originalText;
+                    btnElement.style.backgroundColor = "";
+                    btnElement.style.color = "";
+                }, 1500);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
