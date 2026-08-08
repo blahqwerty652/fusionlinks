@@ -1,28 +1,69 @@
-<!-- Link List Container -->
-<div class="link-list" id="linkList">
-    
-    <div class="link-card" data-keywords="melonloader modloader bonelab">
-        <div class="link-info">
-            <h3>MelonLoader</h3>
-            <p>The universal mod loader required for Fusion.</p>
-        </div>
-        <a href="https://thunderstore.io/c/bonelab/p/LavaGang/MelonLoader/" target="_blank" class="btn">View Page</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion Mod Hub</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent-color: #38bdf8;
+            --border-color: #334155;
+        }
+
+        body { font-family: sans-serif; background-color: var(--bg-color); color: var(--text-color); padding: 2rem; }
+        .container { max-width: 650px; margin: auto; }
+        
+        .video-section { background: var(--card-bg); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem; text-align: center; border: 1px solid var(--border-color); }
+        .video-section h3 { margin-top: 0; }
+        
+        .link-card { background-color: var(--card-bg); padding: 1.25rem; border-radius: 10px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .btn { background-color: var(--accent-color); color: #0f172a; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Fusion Setup Hub</h1>
+
+    <!-- Video Guide Section -->
+    <div class="video-section">
+        <h3>Need Help Installing?</h3>
+        <p>Watch this guide for a full walkthrough.</p>
+        <a href="https://www.youtube.com/watch?v=9R1OwRF1wW8" target="_blank" class="btn">Watch Guide on YouTube</a>
     </div>
 
-    <div class="link-card" data-keywords="bonelib utility mod">
-        <div class="link-info">
-            <h3>BoneLib</h3>
-            <p>Core utility mod that makes life easier for creators.</p>
+    <!-- Link List Container -->
+    <div class="link-list" id="linkList">
+        
+        <div class="link-card" data-keywords="melonloader modloader bonelab">
+            <div class="link-info">
+                <h3>MelonLoader</h3>
+                <p>The universal mod loader required for Fusion.</p>
+            </div>
+            <a href="https://thunderstore.io/c/bonelab/p/LavaGang/MelonLoader/" target="_blank" class="btn">View Page</a>
         </div>
-        <a href="https://thunderstore.io/c/bonelab/p/bonelib/BoneLib/" target="_blank" class="btn">View Page</a>
-    </div>
 
-    <div class="link-card" data-keywords="fusion multiplayer bonelab">
-        <div class="link-info">
-            <h3>Fusion</h3>
-            <p>The Bonelab multiplayer mod.</p>
+        <div class="link-card" data-keywords="bonelib utility mod">
+            <div class="link-info">
+                <h3>BoneLib</h3>
+                <p>Core utility mod that makes life easier for creators.</p>
+            </div>
+            <a href="https://thunderstore.io/c/bonelib/p/bonelib/BoneLib/" target="_blank" class="btn">View Page</a>
         </div>
-        <a href="https://thunderstore.io/c/bonelab/p/Lakatrazz/Fusion/" target="_blank" class="btn">View Page</a>
-    </div>
 
+        <div class="link-card" data-keywords="fusion multiplayer bonelab">
+            <div class="link-info">
+                <h3>Fusion</h3>
+                <p>The Bonelab multiplayer mod.</p>
+            </div>
+            <a href="https://thunderstore.io/c/bonelab/p/Lakatrazz/Fusion/" target="_blank" class="btn">View Page</a>
+        </div>
+
+    </div>
 </div>
+
+</body>
+</html>
